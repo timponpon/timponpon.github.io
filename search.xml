@@ -6,6 +6,11 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>Fastnetmon+ExaBGP筆記</title>
+    <url>/2021/10/13/Fastnetmon-ExaBGP/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>ELK介紹及筆記</title>
     <url>/2021/10/13/ELK%E7%AD%86%E8%A8%98-1/</url>
     <content><![CDATA[<p><img src="/images/ELK/1.png" alt="upload successful"><br><strong>ELK</strong>是三個開源項目第一個字母的縮寫，以下分別為全名及用途：<span id="more"></span><br><strong>E</strong>lasticsearch:搜索和分析引擎<br><strong>L</strong>ogstash:服務器端數據處理管道，能夠同時從多個來源採集數據，轉換數據，然後將數據發送到諸如Elasticsearch等存儲庫中。<br><strong>K</strong>ibana:讓用戶在Elasticsearch中使用圖形和圖表對數據進行可視化。</p>
@@ -16,11 +21,6 @@
 <p>但由於我是用PVE(Proxmox)，<del>所以有點縮水哈哈哈</del></p>
 <p>我的配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:300G</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Fastnetmon+ExaBGP筆記</title>
-    <url>/2021/10/13/Fastnetmon-ExaBGP/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>IPMI介紹及應用</title>
@@ -36,7 +36,7 @@
 <p>2、先確保iDRACx(X為版本) LAN是On，並進去LAN Parameters設定IP；至於使用者帳密可以在Lan User Configuration設定，預設為root/calvin。</p>
 <p><img src="/images/IPMI/2.png" alt="upload successful"></p>
 <p><img src="/images/IPMI/3.png" alt="upload successful"></p>
-<p>3、打開 Web 瀏覽器，然後輸入<a href="https://ipaddress,理論上會看到/">https://ipaddress，理論上會看到</a> iDRAC 登錄畫面。</p>
+<p>3、打開 Web 瀏覽器，然後輸入<span class="exturl"><a class="exturl__link" href="https://ipaddress,理論上會看到/">https://ipaddress，理論上會看到</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> iDRAC 登錄畫面。</p>
 <p><img src="/images/IPMI/4.png" alt="upload successful"></p>
 <hr>
 <p><strong>新版:印象中是各世代的20含以上系列都是</strong></p>
@@ -47,7 +47,7 @@
 <p><img src="/images/IPMI/7.png" alt="upload successful"></p>
 <p>3、回到IDRAC Setting，並進入User Configuration開始設置帳密，預設為root/calvin。</p>
 <p><img src="/images/IPMI/8.png" alt="upload successful"></p>
-<p>4、打開 Web 瀏覽器，然後輸入<a href="https://ipaddress,理論上會看到/">https://ipaddress，理論上會看到</a> iDRAC 登錄畫面。</p>
+<p>4、打開 Web 瀏覽器，然後輸入<span class="exturl"><a class="exturl__link" href="https://ipaddress,理論上會看到/">https://ipaddress，理論上會看到</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> iDRAC 登錄畫面。</p>
 <p><img src="/images/IPMI/4.png" alt="upload successful"></p>
 ]]></content>
   </entry>
