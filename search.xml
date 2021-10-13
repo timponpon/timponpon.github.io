@@ -15,6 +15,30 @@
 <p>以下為建議配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:1T  </p>
 <p>但由於我是用PVE(Proxmox)，<del>所以有點縮水哈哈哈</del></p>
 <p>我的配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:300G</p>
+<hr>
+<p>安裝步驟  </p>
+<ul>
+<li><p>更新Centos7<br>yum -y update<br>yum install epel-release<br>yum -y install nano git nginx<br>reboot</p>
+</li>
+<li><p>安裝Java<br>yum -y install java-1.8.0-openjdk  java-1.8.0-openjdk-deve</p>
+</li>
+<li><p>創建來源文件<br>nano /etc/yum.repos.d/elasticsearch.repo</p>
+</li>
+<li><p>並於裡面增添內容，如下<br>[elasticsearch-7.x]<br>name=7.x 包的 Elasticsearch 存儲庫<br>baseurl=<span class="exturl"><a class="exturl__link" href="https://artifacts.elastic.co/packages/7.x/yum">https://artifacts.elastic.co/packages/7.x/yum</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>gpgcheck=1<br>gpgkey=<span class="exturl"><a class="exturl__link" href="https://artifacts.elastic./">https://artifacts.elastic。</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> co/GPG-KEY-elasticsearch<br>enabled=1<br>autorefresh=1<br>type=rpm-md</p>
+</li>
+<li><p>更新軟體包<br>yum clean all<br>yum makecache</p>
+</li>
+<li><p>安裝Elasticsearch<br>yum -y install elasticsearch  </p>
+</li>
+<li><p>驗證Elasticsearch是否安裝成功<br>rpm -qi elasticsearch<br><img src="/images/ELK/2.png" alt="upload successful"><br>由上圖可以得知安裝版本為7.15.0</p>
+</li>
+<li><p>配置 Elasticsearch<br>vi /etc/elasticsearch/jvm.options<br><img src="/images/ELK/3.png" alt="upload successful"><br>原本前方都是##，把它拿掉即可</p>
+</li>
+<li><p>於elasticsearch.yml中增添兩行指令<br>vi /etc/elasticsearch/elasticsearch.yml<br><img src="/images/ELK/4.png" alt="upload successful"><br><del>xpack這部分之後會講到</del></p>
+</li>
+<li><p>啟動elasticsearch服務並確認狀態是否Up<br>systemctl enable elasticsearch<br>systemctl start elasticsearch<br>systemctl status elasticsearch<br><img src="/images/ELK/5.png" alt="upload successful"></p>
+</li>
+</ul>
 ]]></content>
   </entry>
   <entry>

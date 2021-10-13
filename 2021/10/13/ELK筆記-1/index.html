@@ -6,8 +6,12 @@
 <meta property="og:description" content="ELK是三個開源項目第一個字母的縮寫，以下分別為全名及用途：">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://timponpon.github.io/images/ELK/1.png">
+<meta property="og:image" content="https://timponpon.github.io/images/ELK/2.png">
+<meta property="og:image" content="https://timponpon.github.io/images/ELK/3.png">
+<meta property="og:image" content="https://timponpon.github.io/images/ELK/4.png">
+<meta property="og:image" content="https://timponpon.github.io/images/ELK/5.png">
 <meta property="article:published_time" content="2021-10-13T03:19:45.000Z">
-<meta property="article:modified_time" content="2021-10-13T07:04:10.727Z">
+<meta property="article:modified_time" content="2021-10-13T11:08:47.443Z">
 <meta property="article:author" content="Tim Wu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://timponpon.github.io/images/ELK/1.png"><title>ELK介紹及筆記 | TimWu自學筆記</title><link ref="canonical" href="https://timponpon.github.io/2021/10/13/ELK%E7%AD%86%E8%A8%98-1/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
@@ -41,6 +45,30 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"></he
 <p>以下為建議配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:1T  </p>
 <p>但由於我是用PVE(Proxmox)，<del>所以有點縮水哈哈哈</del></p>
 <p>我的配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:300G</p>
+<hr>
+<p>安裝步驟  </p>
+<ul>
+<li><p>更新Centos7<br>yum -y update<br>yum install epel-release<br>yum -y install nano git nginx<br>reboot</p>
+</li>
+<li><p>安裝Java<br>yum -y install java-1.8.0-openjdk  java-1.8.0-openjdk-deve</p>
+</li>
+<li><p>創建來源文件<br>nano /etc/yum.repos.d/elasticsearch.repo</p>
+</li>
+<li><p>並於裡面增添內容，如下<br>[elasticsearch-7.x]<br>name=7.x 包的 Elasticsearch 存儲庫<br>baseurl=<span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://artifacts.elastic.co/packages/7.x/yum">https://artifacts.elastic.co/packages/7.x/yum</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>gpgcheck=1<br>gpgkey=<span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://artifacts.elastic./">https://artifacts.elastic。</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> co/GPG-KEY-elasticsearch<br>enabled=1<br>autorefresh=1<br>type=rpm-md</p>
+</li>
+<li><p>更新軟體包<br>yum clean all<br>yum makecache</p>
+</li>
+<li><p>安裝Elasticsearch<br>yum -y install elasticsearch  </p>
+</li>
+<li><p>驗證Elasticsearch是否安裝成功<br>rpm -qi elasticsearch<br><img src="/images/ELK/2.png" alt="upload successful"><br>由上圖可以得知安裝版本為7.15.0</p>
+</li>
+<li><p>配置 Elasticsearch<br>vi /etc/elasticsearch/jvm.options<br><img src="/images/ELK/3.png" alt="upload successful"><br>原本前方都是##，把它拿掉即可</p>
+</li>
+<li><p>於elasticsearch.yml中增添兩行指令<br>vi /etc/elasticsearch/elasticsearch.yml<br><img src="/images/ELK/4.png" alt="upload successful"><br><del>xpack這部分之後會講到</del></p>
+</li>
+<li><p>啟動elasticsearch服務並確認狀態是否Up<br>systemctl enable elasticsearch<br>systemctl start elasticsearch<br>systemctl status elasticsearch<br><img src="/images/ELK/5.png" alt="upload successful"></p>
+</li>
+</ul>
 </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://timponpon.github.io">Tim Wu</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://timponpon.github.io/2021/10/13/ELK%E7%AD%86%E8%A8%98-1/">https://timponpon.github.io/2021/10/13/ELK%E7%AD%86%E8%A8%98-1/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_tw" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/10/13/Fastnetmon-ExaBGP/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Fastnetmon+ExaBGP筆記</span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/大頭照.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">網路界中的高級工人</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_tw" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Tim Wu</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.4.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div><div class="busuanzi"><span class="busuanzi-siteuv"><span class="busuanzi-siteuv__icon"><i class="fas fa-user"></i></span><span class="busuanzi-siteuv__info">Visitors</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_uv"></span></span><span class="busuanzi-sitepv"><span class="busuanzi-siteuv__icon"><i class="fas fa-eye"></i></span><span class="busuanzi-siteuv__info">Views</span><span class="busuanzi-siteuv__value" id="busuanzi_value_site_pv"></span></span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="Search for Posts (Support multiple keywords)"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.xml';
