@@ -6,23 +6,6 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>ELK介紹及筆記</title>
-    <url>/2021/10/13/ELK%E7%AD%86%E8%A8%98-1/</url>
-    <content><![CDATA[<p><img src="/images/ELK/1.png" alt="upload successful"><br><strong>ELK</strong>是三個開源項目第一個字母的縮寫，以下分別為全名及用途：<span id="more"></span><br><strong>E</strong>lasticsearch:搜索和分析引擎<br><strong>L</strong>ogstash:服務器端數據處理管道，能夠同時從多個來源採集數據，轉換數據，然後將數據發送到諸如Elasticsearch等存儲庫中。<br><strong>K</strong>ibana:讓用戶在Elasticsearch中使用圖形和圖表對數據進行可視化。</p>
-<p>那ELK是做什麼的？他能應用在哪邊?</p>
-<p>在公司中的網路設備和各式服務每天產生的log十分龐大，用手動的方式去查找特定伺服器的特定log是非常無效率且困難，而ELK則能將龐大且分散四處的log訊息蒐集起來，依條件整理分析後，讓我們能快速搜尋到特定訊息並以視覺化圖表呈現。</p>
-<p>對於網路工程師來說，最怕的是DDOS攻擊，</p>
-<p>以下為建議配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:1T  </p>
-<p>但由於我是用PVE(Proxmox)，<del>所以有點縮水哈哈哈</del></p>
-<p>我的配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:300G</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Fastnetmon+ExaBGP筆記</title>
-    <url>/2021/10/13/Fastnetmon-ExaBGP/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>IPMI介紹及應用</title>
     <url>/2021/10/13/IPMI%E4%BB%8B%E7%B4%B9%E5%8F%8A%E6%87%89%E7%94%A8/</url>
     <content><![CDATA[<p><strong>智慧型平台管理介面</strong>（Intelligent Platform Management Interface）簡單來說是一種可以實施智慧型的監視、控制和自動回報大量伺服器的運作狀況，以降低人員維運成本。<span id="more"></span>只要設備有接上電源線，且IPMI Port有up，理論上來說就可以遠端使用。各服務器廠牌的IPMI名稱也不盡相同，Dell叫IDRAC；HP叫ILO(我以目前有接觸的^^)，部分型號的服務器也可以使用網卡當作IPMI Port，讓使用上有一個備援機制。</p>
@@ -50,5 +33,22 @@
 <p>4、打開 Web 瀏覽器，然後輸入<a href="https://ipaddress,理論上會看到/">https://ipaddress，理論上會看到</a> iDRAC 登錄畫面。</p>
 <p><img src="/images/IPMI/4.png" alt="upload successful"></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>ELK介紹及筆記</title>
+    <url>/2021/10/13/ELK%E7%AD%86%E8%A8%98-1/</url>
+    <content><![CDATA[<p><img src="/images/ELK/1.png" alt="upload successful"><br><strong>ELK</strong>是三個開源項目第一個字母的縮寫，以下分別為全名及用途：<span id="more"></span><br><strong>E</strong>lasticsearch:搜索和分析引擎<br><strong>L</strong>ogstash:服務器端數據處理管道，能夠同時從多個來源採集數據，轉換數據，然後將數據發送到諸如Elasticsearch等存儲庫中。<br><strong>K</strong>ibana:讓用戶在Elasticsearch中使用圖形和圖表對數據進行可視化。</p>
+<p>那ELK是做什麼的？他能應用在哪邊?</p>
+<p>在公司中的網路設備和各式服務每天產生的log十分龐大，用手動的方式去查找特定伺服器的特定log是非常無效率且困難，而ELK則能將龐大且分散四處的log訊息蒐集起來，依條件整理分析後，讓我們能快速搜尋到特定訊息並以視覺化圖表呈現。</p>
+<p>對於網路工程師來說，最怕的是DDOS攻擊，</p>
+<p>以下為建議配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:1T  </p>
+<p>但由於我是用PVE(Proxmox)，<del>所以有點縮水哈哈哈</del></p>
+<p>我的配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:300G</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Fastnetmon+ExaBGP筆記</title>
+    <url>/2021/10/13/Fastnetmon-ExaBGP/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
