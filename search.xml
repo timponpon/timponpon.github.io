@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Cacti筆記</title>
-    <url>/2021/10/13/Cacti%E7%AD%86%E8%A8%98/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>ELK介紹及筆記</title>
     <url>/2021/10/13/ELK%E7%AD%86%E8%A8%98-1/</url>
     <content><![CDATA[<p><img src="/images/ELK/1.png" alt="upload successful"><br><strong>ELK</strong>是三個開源項目第一個字母的縮寫，以下分別為全名及用途：<span id="more"></span><br><strong>E</strong>lasticsearch:搜索和分析引擎<br><strong>L</strong>ogstash:服務器端數據處理管道，能夠同時從多個來源採集數據，轉換數據，然後將數據發送到諸如Elasticsearch等存儲庫中。<br><strong>K</strong>ibana:讓用戶在Elasticsearch中使用圖形和圖表對數據進行可視化。</p>
@@ -16,6 +11,11 @@
 <p>但由於我是用PVE(Proxmox)，<del>所以有點縮水哈哈哈</del></p>
 <p>我的配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:300G</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Cacti筆記</title>
+    <url>/2021/10/13/Cacti%E7%AD%86%E8%A8%98/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Fastnetmon+ExaBGP筆記</title>
