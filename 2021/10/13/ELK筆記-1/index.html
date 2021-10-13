@@ -6,17 +6,19 @@
   
   <title>ELK介紹及筆記 | TimWu自學筆記</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="ELK是三個開源項目第一個字母的縮寫，以下分別為全名及用途： Elasticsearch:搜索和分析引擎 Logstash:服務器端數據處理管道，能夠同時從多個來源採集數據，轉換數據，然後將數據發送到諸如Elasticsearch等存儲庫中。 Kibana:讓用戶在Elasticsearch中使用圖形和圖表對數據進行可視化。 OS:CPU:RAM:HDD:">
+  <meta name="description" content="ELK是三個開源項目第一個字母的縮寫，以下分別為全名及用途：Elasticsearch:搜索和分析引擎Logstash:服務器端數據處理管道，能夠同時從多個來源採集數據，轉換數據，然後將數據發送到諸如Elasticsearch等存儲庫中。Kibana:讓用戶在Elasticsearch中使用圖形和圖表對數據進行可視化。 那ELK是做什麼的？他能應用在哪邊? 在公司中的網路設備和各式服務每天產生的l">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ELK介紹及筆記">
 <meta property="og:url" content="https://timponpon.github.io/2021/10/13/ELK%E7%AD%86%E8%A8%98-1/index.html">
 <meta property="og:site_name" content="TimWu自學筆記">
-<meta property="og:description" content="ELK是三個開源項目第一個字母的縮寫，以下分別為全名及用途： Elasticsearch:搜索和分析引擎 Logstash:服務器端數據處理管道，能夠同時從多個來源採集數據，轉換數據，然後將數據發送到諸如Elasticsearch等存儲庫中。 Kibana:讓用戶在Elasticsearch中使用圖形和圖表對數據進行可視化。 OS:CPU:RAM:HDD:">
+<meta property="og:description" content="ELK是三個開源項目第一個字母的縮寫，以下分別為全名及用途：Elasticsearch:搜索和分析引擎Logstash:服務器端數據處理管道，能夠同時從多個來源採集數據，轉換數據，然後將數據發送到諸如Elasticsearch等存儲庫中。Kibana:讓用戶在Elasticsearch中使用圖形和圖表對數據進行可視化。 那ELK是做什麼的？他能應用在哪邊? 在公司中的網路設備和各式服務每天產生的l">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://timponpon.github.io/images/ELK/1.png">
 <meta property="article:published_time" content="2021-10-13T03:19:45.000Z">
-<meta property="article:modified_time" content="2021-10-13T06:38:52.844Z">
+<meta property="article:modified_time" content="2021-10-13T07:02:36.232Z">
 <meta property="article:author" content="Tim Wu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://timponpon.github.io/images/ELK/1.png">
   
     <link rel="alternate" href="/atom.xml" title="TimWu自學筆記" type="application/atom+xml">
   
@@ -99,16 +101,18 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p><strong>ELK</strong>是三個開源項目第一個字母的縮寫，以下分別為全名及用途：</p>
-<p><strong>E</strong>lasticsearch:搜索和分析引擎</p>
-<p><strong>L</strong>ogstash:服務器端數據處理管道，能夠同時從多個來源採集數據，轉換數據，然後將數據發送到諸如Elasticsearch等存儲庫中。</p>
-<p><strong>K</strong>ibana:讓用戶在Elasticsearch中使用圖形和圖表對數據進行可視化。</p>
-<p>OS:<br>CPU:<br>RAM:<br>HDD:</p>
+        <p><img src="/images/ELK/1.png" alt="upload successful"><br><strong>ELK</strong>是三個開源項目第一個字母的縮寫，以下分別為全名及用途：<br><strong>E</strong>lasticsearch:搜索和分析引擎<br><strong>L</strong>ogstash:服務器端數據處理管道，能夠同時從多個來源採集數據，轉換數據，然後將數據發送到諸如Elasticsearch等存儲庫中。<br><strong>K</strong>ibana:讓用戶在Elasticsearch中使用圖形和圖表對數據進行可視化。</p>
+<p>那ELK是做什麼的？他能應用在哪邊?</p>
+<p>在公司中的網路設備和各式服務每天產生的log十分龐大，用手動的方式去查找特定伺服器的特定log是非常無效率且困難，而ELK則能將龐大且分散四處的log訊息蒐集起來，依條件整理分析後，讓我們能快速搜尋到特定訊息並以視覺化圖表呈現。</p>
+<p>對於網路工程師來說，最怕的是DDOS攻擊，</p>
+<p>以下為建議配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:1T  </p>
+<p>但由於我是用PVE(Proxmox)，<del>所以有點縮水哈哈哈</del></p>
+<p>我的配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:300G</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://timponpon.github.io/2021/10/13/ELK%E7%AD%86%E8%A8%98-1/" data-id="ckup5appm0003hksj2zhc94gc" data-title="ELK介紹及筆記" class="article-share-link">Share</a>
+      <a data-url="https://timponpon.github.io/2021/10/13/ELK%E7%AD%86%E8%A8%98-1/" data-id="ckup61xm2000368sjan9q8b5h" data-title="ELK介紹及筆記" class="article-share-link">Share</a>
       
       
       
