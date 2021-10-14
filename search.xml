@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Centos7 安裝</title>
-    <url>/2021/10/14/Centos7-%E5%AE%89%E8%A3%9D/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Cacti筆記</title>
     <url>/2021/10/13/Cacti%E7%AD%86%E8%A8%98/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>Fastnetmon+ExaBGP筆記</title>
-    <url>/2021/10/13/Fastnetmon-ExaBGP/</url>
+    <title>Centos7 安裝</title>
+    <url>/2021/10/14/Centos7-%E5%AE%89%E8%A3%9D/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -21,7 +16,7 @@
     <content><![CDATA[<p><img src="/images/ELK/1.png" alt="upload successful"><br><strong>ELK</strong>是三個開源項目第一個字母的縮寫，以下分別為全名及用途：<span id="more"></span><br><strong>E</strong>lasticsearch:搜索和分析引擎<br><strong>L</strong>ogstash:服務器端數據處理管道，能夠同時從多個來源採集數據，轉換數據，然後將數據發送到諸如Elasticsearch等存儲庫中。<br><strong>K</strong>ibana:讓用戶在Elasticsearch中使用圖形和圖表對數據進行可視化。</p>
 <p>那ELK是做什麼的？他能應用在哪邊?</p>
 <p>在公司中的網路設備和各式服務每天產生的log十分龐大，用手動的方式去查找特定伺服器的特定log是非常無效率且困難，而ELK則能將龐大且分散四處的log訊息蒐集起來，依條件整理分析後，讓我們能快速搜尋到特定訊息並以視覺化圖表呈現。</p>
-<p>對於網路工程師來說，最怕的是DDOS攻擊，</p>
+<p>對於網路工程師來說，最怕的是DDOS攻擊，所以第三方監控程式+自動化導入黑洞顯得十分重要，這邊先介紹第三方監控程式，之後會在介紹Fastnetmon+ExaBGP實施自動化導入黑洞。</p>
 <p>以下為建議配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:1T  </p>
 <p>但由於我是用PVE(Proxmox)，<del>所以有點縮水哈哈哈</del></p>
 <p>我的配置<br>OS:Centos7.6<br>CPU:4Core<br>RAM:16G<br>HDD:300G</p>
@@ -48,8 +43,29 @@
 </li>
 <li><p>啟動elasticsearch服務並確認狀態是否Up<br>systemctl enable elasticsearch<br>systemctl start elasticsearch<br>systemctl status elasticsearch<br><img src="/images/ELK/5.png" alt="upload successful"></p>
 </li>
+<li><p>安裝Kibana<br>yum install kibana<del>(建議確認elasticsearch和kibana版本是否一樣)</del></p>
+</li>
+<li><p>設定Kibana<br>vi /etc/kibana/kibana.yml<br>server.host: “0.0.0.0”<br>server.name: “elastiflow-fusion”<br><img src="/images/ELK/6.png" alt="upload successful"></p>
+</li>
+<li><p>啟動Kibana服務並確認狀態是否Up<br>systemctl enable kibana<br>systemctl start kibana<br>systemctl status kibana<br><img src="/images/ELK/7.png" alt="upload successful"></p>
+</li>
+<li><p>設定防火牆規則<br>firewall-cmd –add-port=5601/tcp –permanent<br>firewall-cmd –add-port=2055/tcp –permanent<br>firewall-cmd –add-port=2055/udp –permanent<br>firewall-cmd –add-port=6343/tcp –permanent<br>firewall-cmd –add-port=6343/udp –permanent<br>firewall-cmd –add-port=4739/tcp –permanent<br>firewall-cmd –add-port=4739/udp –permanent<br>firewall-cmd –add-port=19999/tcp –permanent<br>firewall-cmd –permanent –zone=public –add-service=http<br>firewall-cmd –permanent –zone=public –add-service=https<br>firewall-cmd –reload  </p>
+</li>
+<li><p>訪問<a href="http://ip-address:5601測試">http://ip-address:5601測試</a> Kibana 是否正常工作， 您應該會看到如下所示的內容：<br><img src="/images/ELK/8.png" alt="upload successful"></p>
+</li>
+<li><p>安裝Logstash<br>yum -y install logstash</p>
+</li>
+<li><p>設定yum -y install logstash<br>vi /etc/logstash/jvm.options<br><img src="/images/ELK/9.png" alt="upload successful"></p>
+</li>
+<li><p>更新Logstash<br>/usr/share/logstash/bin/logstash-plugin install logstash-codec-sflow<br>/usr/share/logstash/bin/logstash-plugin update logstash-codec-netflow<br>/usr/share/logstash/bin/logstash-plugin update logstash-input-udp<br>/usr/share/logstash/bin/logstash-plugin update logstash-input-tcp<br>/usr/share/logstash/bin/logstash-plugin update logstash-filter-dns<br>/usr/share/logstash/bin/logstash-plugin update logstash-filter-geoip  </p>
+</li>
 </ul>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Fastnetmon+ExaBGP筆記</title>
+    <url>/2021/10/13/Fastnetmon-ExaBGP/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>IPMI介紹及應用</title>
