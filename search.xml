@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Cacti筆記</title>
-    <url>/2021/10/13/Cacti%E7%AD%86%E8%A8%98/</url>
+    <title>Centos7 安裝</title>
+    <url>/2021/10/14/Centos7-%E5%AE%89%E8%A3%9D/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>Centos7 安裝</title>
-    <url>/2021/10/14/Centos7-%E5%AE%89%E8%A3%9D/</url>
+    <title>Cacti筆記</title>
+    <url>/2021/10/13/Cacti%E7%AD%86%E8%A8%98/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -29,7 +29,7 @@
 </li>
 <li><p>創建來源文件<br>nano /etc/yum.repos.d/elasticsearch.repo</p>
 </li>
-<li><p>並於裡面增添內容，如下<br>[elasticsearch-7.x]<br>name=7.x 包的 Elasticsearch 存儲庫<br>baseurl=<a href="https://artifacts.elastic.co/packages/7.x/yum">https://artifacts.elastic.co/packages/7.x/yum</a><br>gpgcheck=1<br>gpgkey=<a href="https://artifacts.elastic./">https://artifacts.elastic。</a> co/GPG-KEY-elasticsearch<br>enabled=1<br>autorefresh=1<br>type=rpm-md</p>
+<li><p>並於裡面增添內容，如下<br>[elasticsearch-7.x]<br>name=7.x 包的 Elasticsearch 存儲庫<br>baseurl=<span class="exturl"><a class="exturl__link" href="https://artifacts.elastic.co/packages/7.x/yum">https://artifacts.elastic.co/packages/7.x/yum</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>gpgcheck=1<br>gpgkey=<span class="exturl"><a class="exturl__link" href="https://artifacts.elastic./">https://artifacts.elastic。</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> co/GPG-KEY-elasticsearch<br>enabled=1<br>autorefresh=1<br>type=rpm-md</p>
 </li>
 <li><p>更新軟體包<br>yum clean all<br>yum makecache</p>
 </li>
@@ -61,7 +61,7 @@
 </li>
 <li><p>啟動logstash服務並確認狀態是否Up<br>systemctl enable logstash<br>systemctl start logstash<br>systemctl status logstash</p>
 </li>
-<li><p>安裝Elastiflow<br>cd #Home<br>mkdir flowtemp<br>cd flowtemp<br>sudo git clone <a href="https://github.com/robcowart/elastiflow.git">https://github.com/robcowart/elastiflow.git</a><br>sudo cp -arv elastiflow/logstash/elastiflow/. /etc/logstash/elastiflow/  </p>
+<li><p>安裝Elastiflow<br>cd #Home<br>mkdir flowtemp<br>cd flowtemp<br>sudo git clone <span class="exturl"><a class="exturl__link" href="https://github.com/robcowart/elastiflow.git">https://github.com/robcowart/elastiflow.git</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>sudo cp -arv elastiflow/logstash/elastiflow/. /etc/logstash/elastiflow/  </p>
 </li>
 </ul>
 <p> sudo cp -arv elastiflow/logstash.service.d/. /etc/systemd/system/logstash.service.d/</p>
@@ -75,11 +75,11 @@
 <li><p>載入套件  </p>
 </li>
 </ul>
-<p>1.安裝套件，網址如下:<br><a href="https://github.com/robcowart/elastiflow/tree/master/kibana">https://github.com/robcowart/elastiflow/tree/master/kibana</a><br><strong>點入</strong><br><img src="/images/ELK/11.png" alt="upload successful"><br><img src="/images/ELK/12.png" alt="upload successful"><br><img src="/images/ELK/13.png" alt="upload successful"><br>2.載入上一個步驟下載套件<br><img src="/images/ELK/14.png" alt="upload successful"><br><img src="/images/ELK/15.png" alt="upload successful">  </p>
+<p>1.安裝套件，網址如下:<br><span class="exturl"><a class="exturl__link" href="https://github.com/robcowart/elastiflow/tree/master/kibana">https://github.com/robcowart/elastiflow/tree/master/kibana</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><strong>點入</strong><br><img src="/images/ELK/11.png" alt="upload successful"><br><img src="/images/ELK/12.png" alt="upload successful"><br><img src="/images/ELK/13.png" alt="upload successful"><br>2.載入上一個步驟下載套件<br><img src="/images/ELK/14.png" alt="upload successful"><br><img src="/images/ELK/15.png" alt="upload successful">  </p>
 <ul>
 <li>最後設定完成後，還必須去你要被蒐集Log的設備端設定，我這邊是蒐集Juniper MX80 的SFLOW Log相關步驟可以去Google  </li>
 </ul>
-<p><strong>參考文章</strong><br><a href="https://medium.com/@ronaldbartels/a-guide-to-installing-elastiflow-53c915250df8">https://medium.com/@ronaldbartels/a-guide-to-installing-elastiflow-53c915250df8</a><br><a href="https://oranwind.org/dv-elk-an-zhuang-ji-she-ding-jiao-xue/">https://oranwind.org/dv-elk-an-zhuang-ji-she-ding-jiao-xue/</a>  </p>
+<p><strong>參考文章</strong><br><span class="exturl"><a class="exturl__link" href="https://medium.com/@ronaldbartels/a-guide-to-installing-elastiflow-53c915250df8">https://medium.com/@ronaldbartels/a-guide-to-installing-elastiflow-53c915250df8</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://oranwind.org/dv-elk-an-zhuang-ji-she-ding-jiao-xue/">https://oranwind.org/dv-elk-an-zhuang-ji-she-ding-jiao-xue/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>  </p>
 ]]></content>
   </entry>
   <entry>
@@ -101,7 +101,7 @@
 <p>2、先確保iDRACx(X為版本) LAN是On，並進去LAN Parameters設定IP；至於使用者帳密可以在Lan User Configuration設定，預設為root/calvin。</p>
 <p><img src="/images/IPMI/2.png" alt="upload successful"></p>
 <p><img src="/images/IPMI/3.png" alt="upload successful"></p>
-<p>3、打開 Web 瀏覽器，然後輸入<a href="https://ipaddress,理論上會看到/">https://ipaddress，理論上會看到</a> iDRAC 登錄畫面。</p>
+<p>3、打開 Web 瀏覽器，然後輸入<span class="exturl"><a class="exturl__link" href="https://ipaddress,理論上會看到/">https://ipaddress，理論上會看到</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> iDRAC 登錄畫面。</p>
 <p><img src="/images/IPMI/4.png" alt="upload successful"></p>
 <hr>
 <p><strong>新版:印象中是各世代的20含以上系列都是</strong></p>
@@ -112,7 +112,7 @@
 <p><img src="/images/IPMI/7.png" alt="upload successful"></p>
 <p>3、回到IDRAC Setting，並進入User Configuration開始設置帳密，預設為root/calvin。</p>
 <p><img src="/images/IPMI/8.png" alt="upload successful"></p>
-<p>4、打開 Web 瀏覽器，然後輸入<a href="https://ipaddress,理論上會看到/">https://ipaddress，理論上會看到</a> iDRAC 登錄畫面。</p>
+<p>4、打開 Web 瀏覽器，然後輸入<span class="exturl"><a class="exturl__link" href="https://ipaddress,理論上會看到/">https://ipaddress，理論上會看到</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> iDRAC 登錄畫面。</p>
 <p><img src="/images/IPMI/4.png" alt="upload successful"></p>
 ]]></content>
   </entry>
