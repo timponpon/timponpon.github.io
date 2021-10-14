@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Cacti筆記</title>
-    <url>/2021/10/13/Cacti%E7%AD%86%E8%A8%98/</url>
+    <title>Centos7 安裝</title>
+    <url>/2021/10/14/Centos7-%E5%AE%89%E8%A3%9D/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>Centos7 安裝</title>
-    <url>/2021/10/14/Centos7-%E5%AE%89%E8%A3%9D/</url>
+    <title>Cacti筆記</title>
+    <url>/2021/10/13/Cacti%E7%AD%86%E8%A8%98/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -59,7 +59,27 @@
 </li>
 <li><p>更新Logstash<br>/usr/share/logstash/bin/logstash-plugin install logstash-codec-sflow<br>/usr/share/logstash/bin/logstash-plugin update logstash-codec-netflow<br>/usr/share/logstash/bin/logstash-plugin update logstash-input-udp<br>/usr/share/logstash/bin/logstash-plugin update logstash-input-tcp<br>/usr/share/logstash/bin/logstash-plugin update logstash-filter-dns<br>/usr/share/logstash/bin/logstash-plugin update logstash-filter-geoip  </p>
 </li>
+<li><p>啟動logstash服務並確認狀態是否Up<br>systemctl enable logstash<br>systemctl start logstash<br>systemctl status logstash</p>
+</li>
+<li><p>安裝Elastiflow<br>cd #Home<br>mkdir flowtemp<br>cd flowtemp<br>sudo git clone <span class="exturl"><a class="exturl__link" href="https://github.com/robcowart/elastiflow.git">https://github.com/robcowart/elastiflow.git</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>sudo cp -arv elastiflow/logstash/elastiflow/. /etc/logstash/elastiflow/  </p>
+</li>
 </ul>
+<p> sudo cp -arv elastiflow/logstash.service.d/. /etc/systemd/system/logstash.service.d/</p>
+<ul>
+<li>添加以下指令為 Elastiflow 配置 Logstack<br>nano /etc/logstash/pipelines.yml  </li>
+</ul>
+<p><strong>-</strong> pipeline.id: elastiflow<br>path.config: “/etc/logstash/elastiflow/conf.d/*.conf”<br><img src="/images/ELK/10.png" alt="upload successful"></p>
+<ul>
+<li><p>重啟並確認Logstash是否啟動<br>tail /var/log/logstash/logstash-plain.log -f<br>有東西代表有搜到Log</p>
+</li>
+<li><p>載入套件  </p>
+</li>
+</ul>
+<p>1.安裝套件，網址如下:<br><span class="exturl"><a class="exturl__link" href="https://github.com/robcowart/elastiflow/tree/master/kibana">https://github.com/robcowart/elastiflow/tree/master/kibana</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><strong>點入</strong><br><img src="/images/ELK/11.png" alt="upload successful"><br><img src="/images/ELK/12.png" alt="upload successful"><br><img src="/images/ELK/13.png" alt="upload successful"><br>2.載入上一個步驟下載套件<br><img src="/images/ELK/14.png" alt="upload successful"><br><img src="/images/ELK/15.png" alt="upload successful">  </p>
+<ul>
+<li>最後設定完成後，還必須去你要被蒐集Log的設備端設定，我這邊是蒐集Juniper MX80 的SFLOW Log相關步驟可以去Google  </li>
+</ul>
+<p><strong>參考文章</strong><br><span class="exturl"><a class="exturl__link" href="https://medium.com/@ronaldbartels/a-guide-to-installing-elastiflow-53c915250df8">https://medium.com/@ronaldbartels/a-guide-to-installing-elastiflow-53c915250df8</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://oranwind.org/dv-elk-an-zhuang-ji-she-ding-jiao-xue/">https://oranwind.org/dv-elk-an-zhuang-ji-she-ding-jiao-xue/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>  </p>
 ]]></content>
   </entry>
   <entry>
