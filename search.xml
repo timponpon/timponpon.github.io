@@ -77,15 +77,17 @@
 </ul>
 <p>1.安裝套件，網址如下:<br><span class="exturl"><a class="exturl__link" href="https://github.com/robcowart/elastiflow/tree/master/kibana">https://github.com/robcowart/elastiflow/tree/master/kibana</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><strong>點入</strong><br><img src="/images/ELK/11.png" alt="upload successful"><br><img src="/images/ELK/12.png" alt="upload successful"><br><img src="/images/ELK/13.png" alt="upload successful"><br>2.載入上一個步驟下載套件<br><img src="/images/ELK/14.png" alt="upload successful"><br><img src="/images/ELK/15.png" alt="upload successful">  </p>
 <ul>
+<li>登入後會發現一直跳安全性告警，以下為解決方法  </li>
+</ul>
+<p>1.vi /etc/elasticsearch/elasticsearch.yml，最後加入指令xpack.security.enabled: false<br>2.安裝XPACK，但要錢  </p>
+<ul>
+<li> 最後建議防火牆(firewalld)將5601、SSH等服務做調整，<del>不要裸奔</del></li>
+</ul>
+<ul>
 <li>最後設定完成後，還必須去你要被蒐集Log的設備端設定，我這邊是蒐集Juniper MX80 的SFLOW Log相關步驟可以去Google  </li>
 </ul>
-<p><strong>參考文章</strong><br><span class="exturl"><a class="exturl__link" href="https://medium.com/@ronaldbartels/a-guide-to-installing-elastiflow-53c915250df8">https://medium.com/@ronaldbartels/a-guide-to-installing-elastiflow-53c915250df8</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://oranwind.org/dv-elk-an-zhuang-ji-she-ding-jiao-xue/">https://oranwind.org/dv-elk-an-zhuang-ji-she-ding-jiao-xue/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>  </p>
+<p><strong>參考文章</strong><br><span class="exturl"><a class="exturl__link" href="https://medium.com/@ronaldbartels/a-guide-to-installing-elastiflow-53c915250df8">https://medium.com/@ronaldbartels/a-guide-to-installing-elastiflow-53c915250df8</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" href="https://oranwind.org/dv-elk-an-zhuang-ji-she-ding-jiao-xue/">https://oranwind.org/dv-elk-an-zhuang-ji-she-ding-jiao-xue/</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Fastnetmon+ExaBGP筆記</title>
-    <url>/2021/10/13/Fastnetmon-ExaBGP/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>IPMI介紹及應用</title>
@@ -119,6 +121,11 @@
   <entry>
     <title>PVE(Proxmox安裝)</title>
     <url>/2021/10/14/PVE-Proxmox%E5%AE%89%E8%A3%9D/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Fastnetmon+ExaBGP筆記</title>
+    <url>/2021/10/13/Fastnetmon-ExaBGP/</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>
