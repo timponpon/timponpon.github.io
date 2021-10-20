@@ -9,7 +9,12 @@
     <title>Centos7 安裝</title>
     <url>/2021/10/14/Centos7-%E5%AE%89%E8%A3%9D/</url>
     <content><![CDATA[<p>鑒於許多新人都沒有安裝過Linux，所以就寫了這邊當作示範，這邊會以PVE(Proxmox)來做示範，<del>畢竟沒有實體機給你們玩^^</del><span id="more"></span>   </p>
-<p>———————————–以下開始示範——————-<br>建立&gt;輸入名稱(規則:<strong>客戶-用途-系統-IP</strong>)&gt;選擇<strong>ISO</strong>&gt;系統不用更改&gt;選擇<strong>硬碟</strong>大小&gt;選擇<strong>核心數</strong>&gt; 選擇<strong>記憶體</strong>(練習就用4G吧)&gt;選擇橋接的網卡，就要看實體機如何設定了^^<br><img src="/images/Centos7/1.png" alt="upload successful"><br><img src="/images/Centos7/2.png" alt="upload successful"><br><img src="/images/Centos7/3.png" alt="upload successful"><br><img src="/images/Centos7/4.png" alt="upload successful"><br><img src="/images/Centos7/5.png" alt="upload successful"><br><img src="/images/Centos7/6.png" alt="upload successful"><br><img src="/images/Centos7/7.png" alt="upload successful"></p>
+<p>以下開始示範</p>
+<p>建立&gt;輸入名稱(規則:<strong>客戶-用途-系統-IP</strong>)&gt;選擇<strong>ISO</strong>&gt;系統不用更改&gt;選擇<strong>硬碟</strong>大小&gt;選擇<strong>核心數</strong>&gt; 選擇<strong>記憶體</strong>(練習就用4G吧)&gt;選擇橋接的網卡，就要看實體機如何設定了^^<br><img src="/images/Centos7/1.png" alt="upload successful"><br><img src="/images/Centos7/2.png" alt="upload successful"><br><img src="/images/Centos7/3.png" alt="upload successful"><br><img src="/images/Centos7/4.png" alt="upload successful"><br><img src="/images/Centos7/5.png" alt="upload successful"><br><img src="/images/Centos7/6.png" alt="upload successful"><br><img src="/images/Centos7/7.png" alt="upload successful"><br><img src="/images/Centos7/8.png" alt="upload successful">  </p>
+<p>建立完VPS就開始重點的安裝流程!!!!</p>
+<p>點開<strong>主控台(KVM)</strong><br><img src="/images/Centos7/9.png" alt="upload successful">  </p>
+<p>選擇語言&gt;下一部&gt;調整時區&gt;調整硬碟分區(練習就直接選擇自動分配)&gt;設定網卡及Hostname&gt;打開<strong>開機自動啟動網卡</strong>&gt;設定IP參數&gt;開始安裝&gt;設定root密碼<br><img src="/images/Centos7/10.png" alt="upload successful"><br><img src="/images/Centos7/11.png" alt="upload successful"><br><img src="/images/Centos7/12.png" alt="upload successful"><br><img src="/images/Centos7/13.png" alt="upload successful"><br><img src="/images/Centos7/14.png" alt="upload successful"><br><img src="/images/Centos7/15.png" alt="upload successful"><br><img src="/images/Centos7/16.png" alt="upload successful"><br><img src="/images/Centos7/17.png" alt="upload successful"><br><img src="/images/Centos7/18.png" alt="upload successful"><br><img src="/images/Centos7/19.png" alt="upload successful"><br><img src="/images/Centos7/20.png" alt="upload successful"><br><img src="/images/Centos7/21.png" alt="upload successful"><br><img src="/images/Centos7/22.png" alt="upload successful">  </p>
+<p>基本上跑完安裝完後，必須重開機，接下來就是博大精深的Linux世界了!!!</p>
 ]]></content>
   </entry>
   <entry>
