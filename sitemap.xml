@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://timponpon.github.io/2021/10/14/Centos7-%E5%AE%89%E8%A3%9D/</loc>
+    
+    <lastmod>2021-10-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://timponpon.github.io/2021/10/13/ELK%E7%AD%86%E8%A8%98-1/</loc>
     
     <lastmod>2021-10-15</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>https://timponpon.github.io/2021/10/14/PVE-Proxmox%E5%AE%89%E8%A3%9D/</loc>
-    
-    <lastmod>2021-10-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://timponpon.github.io/2021/10/14/Centos7-%E5%AE%89%E8%A3%9D/</loc>
     
     <lastmod>2021-10-14</lastmod>
     

@@ -8,7 +8,9 @@
   <entry>
     <title>Centos7 安裝</title>
     <url>/2021/10/14/Centos7-%E5%AE%89%E8%A3%9D/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>鑒於許多新人都沒有安裝過Linux，所以就寫了這邊當作示範，這邊會以PVE(Proxmox)來做示範，<del>畢竟沒有實體機給你們玩^^</del><span id="more"></span>   </p>
+<p>———————————–以下開始示範——————-<br>建立&gt;輸入名稱(規則:<strong>客戶-用途-系統-IP</strong>)&gt;選擇<strong>ISO</strong>&gt;系統不用更改&gt;選擇<strong>硬碟</strong>大小&gt;選擇<strong>核心數</strong>&gt; 選擇<strong>記憶體</strong>(練習就用4G吧)&gt;選擇橋接的網卡，就要看實體機如何設定了^^<br><img src="/images/Centos7/1.png" alt="upload successful"><br><img src="/images/Centos7/2.png" alt="upload successful"><br><img src="/images/Centos7/3.png" alt="upload successful"><br><img src="/images/Centos7/4.png" alt="upload successful"><br><img src="/images/Centos7/5.png" alt="upload successful"><br><img src="/images/Centos7/6.png" alt="upload successful"><br><img src="/images/Centos7/7.png" alt="upload successful"></p>
+]]></content>
   </entry>
   <entry>
     <title>ELK介紹及筆記</title>
