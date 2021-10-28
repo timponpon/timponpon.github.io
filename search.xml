@@ -136,13 +136,13 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>線路分別</title>
+    <title>專有名詞解釋</title>
     <url>/2021/10/28/%E7%B7%9A%E8%B7%AF%E5%88%86%E5%88%A5/</url>
-    <content><![CDATA[<p><strong>idc farm:</strong><br>遠傳基本上在自己的各機房之間都有互連專線，舉例A客戶在遠傳468和遠傳板橋都有申請機櫃，他就可以跟遠傳申請一條idc farm，作為機房間互通(類似ELC)</p>
+    <content><![CDATA[<p><strong>idc farm:</strong><br>遠傳基本上在自己的各機房之間都有互連專線，舉例A客戶在遠傳468和遠傳板橋都有申請機櫃，他就可以跟遠傳申請一條idc farm，作為機房間互通(類似ELC)<span id="more"></span> </p>
 <p><strong>ELC:</strong><br>A客戶想要在是方和遠傳之間做不帶IP的專線，就要申請ELC</p>
 <p><strong>ELK:</strong><br>A客戶想要在是方和遠傳之間做”帶IP”的專線，就要申請ELC</p>
 <p><strong>Burst:</strong><br>假設A客戶想租一段線路，速率為15M Burst 40M，代表保底15M超過按比例收費，最高到40M</p>
-<p><strong>公司申請線路:</strong><br>中華<br>遠傳<br>是方(區分專業級和白金級)<br>專業:對大陸非直連路由<br>白金:路由直連延遲較低  </p>
+<p><strong>公司申請線路:</strong><br>中華<br>遠傳<br>是方(區分專業級和白金級)<br>專業:對大陸非直連路由<br>白金:路由直連延遲較低</p>
 ]]></content>
   </entry>
 </search>
